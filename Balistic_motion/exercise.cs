@@ -14,7 +14,7 @@ public class exercise : MonoBehaviour
 
   private float g = 9.8f;
 
-  public float totalTime = 0.4f;
+  public float totalTime = 10f;
 
 
   void Start()
@@ -47,8 +47,8 @@ public class exercise : MonoBehaviour
   }
 
  (Vector3, Vector3 , float) EluerMethod(Vector3 position, Vector3 velocity, Vector3 acceleration, float time){
-    Vector3 newPosition = position + velocity*(time+ dt); 
-    Vector3 newVelocity = velocity + acceleration*(time + dt);
+    Vector3 newPosition = position + velocity*(dt); 
+    Vector3 newVelocity = velocity + acceleration*(dt);
     time += dt;
     return (newPosition, newVelocity, time);
 }
